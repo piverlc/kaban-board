@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5-L2-Assignment</title>
+    <link rel="stylesheet" href="taskboard.css" />
+    <script src="taskboard.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="task-title">
+        <svg height="130" width="780">
+          <rect
+            x="90"
+            y="32.5"
+            rx="20"
+            ry="20"
+            width="82.5%"
+            height="50%"
+            style="fill: #fd3135; opacity: 0.7"
+          />
+          <text
+            style="fill: #fff; opacity: 1"
+            font-size="40"
+            font-family="task-title"
+            x="120"
+            y="75"
+          >
+            Project Odyssey - Kanban Board
+          </text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+      <div class="task-location" id="task-location"></div>
+      <br /><br /><br /><br />
+      <div class="task-board">
+        <div
+          class="task-block"
+          id="backlog"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div class="task-heading">
+            <strong>Backlog<span id="backlog-count"></span></strong>
+          </div>
+
+          <div
+            class="tasks"
+            id="task4"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="heading">L2A-1</div>
+            <div class="body">User: Edit profile</div>
+            <hr />
+            <div class="footer">Author blogs</div>
+          </div>
+
+          <div
+            class="tasks"
+            id="task5"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="heading">L2A-2</div>
+            <div class="body">User: Create Article</div>
+            <hr />
+            <div class="footer">Author blogs</div>
+          </div>
+
+          <div
+            class="tasks"
+            id="task6"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="heading">L2A-3</div>
+            <div class="body">User: Edit my article</div>
+            <hr />
+            <div class="footer">Author blogs</div>
+          </div>
+
+          <div
+            class="tasks"
+            id="task3"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="heading">L2A-4</div>
+            <div class="body">Admin: Block user account</div>
+            <hr />
+            <div class="footer">Author blogs</div>
+          </div>
+
+          <div
+            class="tasks"
+            id="task1"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="heading">L2A-5</div>
+
+            <div class="body">Admin: List users</div>
+            <hr />
+            <div class="footer">Author blogs</div>
+          </div>
+
+          <div
+            class="tasks"
+            id="task2"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="heading">L2A-6</div>
+
+            <div class="body">Admin: Approve user account</div>
+            <hr />
+            <div class="footer">Author blogs</div>
+          </div>
+        </div>
+
+        <div
+          class="task-block"
+          id="dev"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div class="task-heading">
+            <strong>Selected for Dev<span id="dev-count"></span></strong>
+          </div>
+        </div>
+
+        <div
+          class="task-block"
+          id="progress"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div class="task-heading">
+            <strong>In Progress<span id="progress-count"></span></strong>
+          </div>
+        </div>
+
+        <div
+          class="task-block"
+          id="done"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div class="task-heading">
+            <strong>Done<span id="done-count"></span></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

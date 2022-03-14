@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fcfffe;
+  overflow: auto;
+}
+
+/*Task Title*/
+
+.task-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: sans-serif;
+}
+
+/*Location Style*/
+
+#task-location {
+  font-size: large;
+  font-weight: bolder;
+  font-family: task-location;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  padding: 1vw;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #fff;
+}
+#task-location ::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Task Board*/
+
+.task-board {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  border: 2px solid #dde9ff;
+  background-color: #fff;
+}
+
+.task-board > div {
+  width: 100%;
+  height: 1000px;
+  margin: 5px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.task-board:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Individual Tasks Style*/
+
+.tasks {
+  background-color: #fcfcfc;
+  margin: 0.3rem 0rem 0.3rem 0rem;
+  border: 2px solid whitesmoke;
+  border-radius: 0.2rem;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.tasks:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.task div {
+  padding-left: 1rem;
+}
+
+/*Tasks Style*/
+
+.heading {
+  font-family: heading;
+  color: #808080;
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.body {
+  color: #1c1b1a;
+  font-family: body;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer {
+  font-family: footer;
+  color: #999999;
+  font-weight: bold;
+}
+.tasks hr {
+  height: 2px;
+  background-color: lightgrey;
+  border: none;
+  margin-bottom: 10px;
+}
+
+/*Task Container and Task Heading Style*/
+
+.task-heading {
+  color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+  font-family: task-heading;
+}
+
+#backlog strong {
+  padding: 5px 8px;
+  border-radius: 2px;
+  background-color: #9989cf;
+}
+#backlog {
+  background-color: #d9b9fc;
+}
+#dev strong {
+  padding: 5px 8px;
+  border-radius: 2px;
+  background-color: #48c1ea;
+}
+#dev {
+  background-color: #a6daf7;
+}
+#progress strong {
+  padding: 5px 8px;
+  border-radius: 2px;
+  background-color: #59b582;
+}
+#progress {
+  background-color: #a6f7c3;
+}
+#done strong {
+  padding: 5px 8px;
+  border-radius: 2px;
+  background-color: rgb(52, 199, 89);
+}
+#done {
+  background-color: #daf7a6;
+}
+
+/*Font Style*/
+
+@font-face {
+  font-family: heading;
+  src: url("IBM_Plex_Sans/IBMPlexSans-Medium.ttf");
+}
+@font-face {
+  font-family: body;
+  src: url("IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
+}
+@font-face {
+  font-family: footer;
+  src: url("IBM_Plex_Sans/IBMPlexSans-Italic.ttf");
+}
+@font-face {
+  font-family: task-heading;
+  src: url("IBM_Plex_Sans/IBMPlexSans-Medium.ttf");
+}
+@font-face {
+  font-family: task-location;
+  src: url("IBM_Plex_Sans/IBMPlexSans-Light.ttf");
+}
+@font-face {
+  font-family: task-title;
+  src: url("IBM_Plex_Sans/IBMPlexSans-SemiBoldItalic.ttf");
+}
+.task-block {
+  width: inherit;
+  position: relative;
+}
